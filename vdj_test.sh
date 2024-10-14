@@ -21,9 +21,9 @@ module load mmseqs2/14.7e284
 #do
 #echo $file 
 #filename=$(basename "$file")
-#python dnabert_finetune_eval.py --model 'models/model_shmCompleteInsertionsStartEnd_Vallele_newdict.pt' --type 'V' --test_dir $file --kmer 3 --batch_size 256 --weight_decay 0.0 --nb_seq_max 150000 --output "output_Valleles_$filename.txt" --nolabel --allele --cluster
-#python dnabert_finetune_eval.py --model 'models/model_shmCompleteInsertionsStartEnd_Jalleles_rev.pt' --type 'J' --test_dir $file --kmer 3 --batch_size 256 --weight_decay 0.0 --nb_seq_max 150000 --output "output_Jalleles_$filename.txt" --nolabel --allele --cluster
-#python dnabert_finetune_eval.py --model 'models/model_shmCompleteInsertionStartEnd_Dalleles.pt' --type 'D' --test_dir $file --kmer 3 --batch_size 256 --weight_decay 0.0 --nb_seq_max 150000 --output "output_Dalleles_$filename.txt" --nolabel --allele --cluster 
+#python vdjdeep_predict.py --model 'models/model_shmCompleteInsertionsStartEnd_Vallele_newdict.pt' --type 'V' --test_dir $file --kmer 3 --batch_size 256 --weight_decay 0.0 --nb_seq_max 150000 --output "output_Valleles_$filename.txt" --nolabel --allele --cluster
+#python vdjdeep_predict.py --model 'models/model_shmCompleteInsertionsStartEnd_Jalleles_rev.pt' --type 'J' --test_dir $file --kmer 3 --batch_size 256 --weight_decay 0.0 --nb_seq_max 150000 --output "output_Jalleles_$filename.txt" --nolabel --allele --cluster
+#python vdjdeep_predict.py --model 'models/model_shmCompleteInsertionStartEnd_Dalleles.pt' --type 'D' --test_dir $file --kmer 3 --batch_size 256 --weight_decay 0.0 --nb_seq_max 150000 --output "output_Dalleles_$filename.txt" --nolabel --allele --cluster 
 #echo ' '
 #done
 #done
