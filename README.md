@@ -33,4 +33,4 @@ For example, if you want to run inference to identify V genes without alleles, y
 python vdjdeep_predict.py --model [model_file_path] --test_dir [testing_file] --kmer 3 --batch_size 32 --weight_decay 0.0 --nb_seq_max 200000 --output "output_Vgenes.txt" --nolabel 
 ```
 Other examples are given on the script [vdj_test.py](https://github.com/kdradjat/vdjdeep/blob/main/vdj_test.sh). 
-Trained model .pt files for genes/alleles identification are available [here].
+Trained model .pt files for genes/alleles identification are available [here](https://dropsu.sorbonne-universite.fr/s/QztBEcMSX5RWTJi).
