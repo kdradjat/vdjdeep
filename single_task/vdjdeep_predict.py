@@ -10,7 +10,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers import pipeline
 import pandas as pd
 import sys
-from src.data_vdj import *
+from src.data_vdj_old import *
 import json
 import torch.optim as optim
 import torch.nn.functional as F
@@ -21,7 +21,6 @@ from transformers import BertModel, BertForMaskedLM, BertConfig, EncoderDecoderM
 from sklearn.metrics import roc_auc_score
 from scipy.special import softmax
 
-import sys
 import torch
 import torch.utils.data as data
 from torch.nn.utils.rnn import pad_sequence
