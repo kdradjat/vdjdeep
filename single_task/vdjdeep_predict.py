@@ -1,6 +1,5 @@
 import torch 
 import torch.nn as nn
-import torchmetrics
 import transformers
 import datasets
 from transformers import get_linear_schedule_with_warmup, get_cosine_schedule_with_warmup, get_constant_schedule_with_warmup
