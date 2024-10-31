@@ -22,6 +22,7 @@ from scipy.special import softmax
 
 import torch
 import torch.utils.data as data
+import torchmetrics
 from torch.nn.utils.rnn import pad_sequence
 import os
 from transformers.models.bert.modeling_bert import BertPreTrainedModel, BertOnlyMLMHead, SequenceClassifierOutput
@@ -379,7 +380,8 @@ def main():
                                 vect = vect.detach().cpu().numpy()
                                 vect = softmax(vect)
                                 pred = [u for u, v in genes_dict.items() if v == int(np.argmax(vect))][0]
-                                file.write(f'>{batch[10][c]}|{pred}\n{kmer2seq(batch[7][c])}\n')
+                                #file.write(f'>{batch[10][c]}|{pred}\n{kmer2seq(batch[7][c])}\n')
+                                file.write(f'>S{k}|{pred}\n{kmer2seq(batch[7][c])}\n')
                                 c += 1
                                 k += 1
                     print("acc :", metric.compute())
